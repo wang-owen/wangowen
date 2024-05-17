@@ -8,14 +8,14 @@ const Navbar = () => {
             <Link to="/" className={linkClass}>
                 home
             </Link>
+            <Link to="/resume" className={linkClass}>
+                resume
+            </Link>
             <Link to="/projects" className={linkClass}>
                 projects
             </Link>
             <Link to="/blog" className={linkClass}>
                 blog
-            </Link>
-            <Link to="/resume" className={linkClass}>
-                resume
             </Link>
             {/* <a
                 href="Owen Wang Resume.pdf"
