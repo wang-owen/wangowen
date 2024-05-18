@@ -1,7 +1,6 @@
 import { pdfjs, Document, Page } from "react-pdf";
 import "react-pdf/dist/Page/AnnotationLayer.css";
 import "react-pdf/dist/Page/TextLayer.css";
-import oliver from "../assets/img/Oliver2.png";
 import pythonIcon from "../assets/img/icons/python.svg";
 import javaIcon from "../assets/img/icons/java.svg";
 import typescriptIcon from "../assets/img/icons/typescript-icon.svg";
@@ -40,6 +39,13 @@ const ResumePage = () => {
         gitIcon,
         postgresqlIcon,
         linuxLogo,
+    ];
+
+    const stats = [
+        "185 bench",
+        "masters 221 lp league",
+        "1 million mastery rengar",
+        "1000 bedwars wins",
     ];
 
     return (
@@ -87,17 +93,20 @@ const ResumePage = () => {
                                 </p>
                             </div>
                         </div>
-                        <div className="flex flex-col items-center text-xs">
-                            <img src={oliver} width={325}></img>
-                            <br></br>
-                            My cat, Oliver
-                        </div>
                         <div>
                             <div className="m-8 grid grid-cols-5 gap-10 justify-items-center">
                                 {skills.map((skill) => (
                                     <img src={skill} width="50"></img>
                                 ))}
                             </div>
+                        </div>
+                        <div className="w-1/2 self-center">
+                            <span className="text-2xl">misc stats</span>
+                            <ul className="list-item text-left">
+                                {stats.map((stat) => (
+                                    <li className="list-disc">{stat}</li>
+                                ))}
+                            </ul>
                         </div>
                     </div>
                 </div>
