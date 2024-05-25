@@ -70,7 +70,7 @@ const ResumePage = () => {
         <>
             <div className="min-h-screen flex items-center justify-center">
                 <div className="w-5/6 flex flex-col sm:flex-row justify-between my-20 sm:my-8">
-                    <div className="text-center">
+                    <div className="text-center animate-fadeInFromLeft">
                         <div className="w-min border border-gray-400 shadow-xl">
                             <Document file="Owen Wang Resume.pdf">
                                 <Page pageNumber={1} width={pageWidth} />
