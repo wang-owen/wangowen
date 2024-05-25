@@ -8,8 +8,12 @@ const ProjectCard = ({
     description: String[];
 }) => {
     return (
-        <div className="p-5 h-96 font-serif">
-            <a href={link} target="_blank" className="text-xl mb-3 hover:underline">
+        <div className="p-5 font-serif">
+            <a
+                href={link}
+                target="_blank"
+                className="text-xl mb-3 hover:underline"
+            >
                 {title}
             </a>
             <div>

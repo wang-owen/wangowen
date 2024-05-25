@@ -2,11 +2,8 @@ import ProjectCard from "../components/ProjectCard";
 
 const ProjectsPage = () => {
     return (
-        // <div className="flex justify-center items-center min-h-screen text-6xl">
-        //     &#128193; work in progress...
-        // </div>
         <section className="flex justify-center items-center">
-            <div className="mt-28 w-5/6 grid grid-cols-3 gap-4">
+            <div className="mt-20 w-5/6 lg:w-1/3">
                 <ProjectCard
                     title="Brook"
                     link="https://github.com/wang-owen/Brook"

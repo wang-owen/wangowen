@@ -16,6 +16,7 @@ import bootstrapIcon from "../assets/img/icons/bootstrap.svg";
 import gitIcon from "../assets/img/icons/git-icon.svg";
 import postgresqlIcon from "../assets/img/icons/postgresql.svg";
 import linuxLogo from "../assets/img/icons/linux-tux.svg";
+import { useState, useEffect } from "react";
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
     "pdfjs-dist/build/pdf.worker.min.js",
@@ -48,14 +49,31 @@ const ResumePage = () => {
         "1000 bedwars wins",
     ];
 
+    const [pageWidth, setPageWidth] = useState(window.innerWidth * 0.75);
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth >= 640) {
+                setPageWidth((window.innerWidth * 2) / 5);
+            } else {
+                setPageWidth(window.innerWidth * 0.85);
+            }
+        };
+
+        window.addEventListener("resize", handleResize);
+        handleResize();
+
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
     return (
         <>
             <div className="min-h-screen flex items-center justify-center">
-                <div className="w-3/4 flex justify-between">
+                <div className="w-5/6 flex flex-col sm:flex-row justify-between my-20 sm:my-8">
                     <div className="text-center">
                         <div className="w-min border border-gray-400 shadow-xl">
                             <Document file="Owen Wang Resume.pdf">
-                                <Page pageNumber={1} scale={1.1} />
+                                <Page pageNumber={1} width={pageWidth} />
                             </Document>
                         </div>
                         <a
@@ -66,7 +84,7 @@ const ResumePage = () => {
                             Open PDF
                         </a>
                     </div>
-                    <div className="mx-20 text-center flex flex-col justify-between">
+                    <div className="sm:ml-12 text-center flex flex-col justify-start w-full">
                         <div>
                             <div className="m-5 text-4xl">Owen Wang</div>
                             <div className="text-lg">
@@ -94,7 +112,7 @@ const ResumePage = () => {
                             </div>
                         </div>
                         <div>
-                            <div className="m-8 grid grid-cols-5 gap-10 justify-items-center">
+                            <div className="m-8 grid grid-cols-5 gap-4 justify-items-center">
                                 {skills.map((skill) => (
                                     <img src={skill} width="50"></img>
                                 ))}
