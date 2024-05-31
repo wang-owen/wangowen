@@ -5,7 +5,7 @@ const ProjectCard = ({
 }: {
     title: string;
     link: string;
-    description: String[];
+    description: string;
 }) => {
     return (
         <div className="p-5 font-serif">
@@ -17,15 +17,7 @@ const ProjectCard = ({
                 {title}
             </a>
             <div>
-                <div className="text-base leading-6">
-                    <ul>
-                        {description.map((point) => (
-                            <li className="list-disc" key={point.toString()}>
-                                {point}
-                            </li>
-                        ))}
-                    </ul>
-                </div>
+                <div className="text-base leading-6">{description}</div>
             </div>
         </div>
     );

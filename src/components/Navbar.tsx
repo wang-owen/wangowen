@@ -14,16 +14,9 @@ const Navbar = () => {
             <Link to="/projects" className={linkClass}>
                 projects
             </Link>
-            <Link to="/blog" className={linkClass}>
+            {/* <Link to="/blog" className={linkClass}>
                 blog
-            </Link>
-            {/* <a
-                href="Owen Wang Resume.pdf"
-                target="_blank"
-                className={linkClass}
-            >
-                resume
-            </a> */}
+            </Link> */}
         </div>
     );
 };

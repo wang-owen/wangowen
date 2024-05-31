@@ -1,22 +1,31 @@
 import { pdfjs, Document, Page } from "react-pdf";
 import "react-pdf/dist/Page/AnnotationLayer.css";
 import "react-pdf/dist/Page/TextLayer.css";
-import pythonIcon from "../assets/img/icons/python.svg";
-import javaIcon from "../assets/img/icons/java.svg";
-import typescriptIcon from "../assets/img/icons/typescript-icon.svg";
-import javascriptIcon from "../assets/img/icons/javascript.svg";
-import htmlIcon from "../assets/img/icons/html-5.svg";
-import cssIcon from "../assets/img/icons/css-3.svg";
-import sassIcon from "../assets/img/icons/sass.svg";
-import cIcon from "../assets/img/icons/c.svg";
-import djangoIcon from "../assets/img/icons/django-icon.svg";
-import reactIcon from "../assets/img/icons/react.svg";
-import tailwindIcon from "../assets/img/icons/tailwindcss-icon.svg";
-import bootstrapIcon from "../assets/img/icons/bootstrap.svg";
-import gitIcon from "../assets/img/icons/git-icon.svg";
-import postgresqlIcon from "../assets/img/icons/postgresql.svg";
-import linuxLogo from "../assets/img/icons/linux-tux.svg";
 import { useState, useEffect } from "react";
+import oliver from "../assets/img/Oliver.png";
+import {
+    FaPython,
+    FaJava,
+    FaJs,
+    FaHtml5,
+    FaCss3,
+    FaSass,
+    FaReact,
+    FaBootstrap,
+    FaGitAlt,
+    FaLinux,
+} from "react-icons/fa6";
+import {
+    SiTypescript,
+    SiDjango,
+    SiTailwindcss,
+    SiPostgresql,
+    SiSqlite,
+    SiRabbitmq,
+    SiDocker,
+    SiAmazonaws,
+} from "react-icons/si";
+import { TbSql } from "react-icons/tb";
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
     "pdfjs-dist/build/pdf.worker.min.js",
@@ -24,22 +33,27 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
 ).toString();
 
 const ResumePage = () => {
+    const iconSize = 50;
     const skills = [
-        pythonIcon,
-        javaIcon,
-        typescriptIcon,
-        javascriptIcon,
-        htmlIcon,
-        cssIcon,
-        sassIcon,
-        cIcon,
-        djangoIcon,
-        reactIcon,
-        tailwindIcon,
-        bootstrapIcon,
-        gitIcon,
-        postgresqlIcon,
-        linuxLogo,
+        <FaPython size={iconSize} />,
+        <FaJava size={iconSize} />,
+        <FaJs size={iconSize} />,
+        <SiTypescript size={iconSize} />,
+        <FaHtml5 size={iconSize} />,
+        <FaCss3 size={iconSize} />,
+        <FaSass size={iconSize} />,
+        <TbSql size={iconSize} />,
+        <SiDjango size={iconSize} />,
+        <FaReact size={iconSize} />,
+        <SiTailwindcss size={iconSize} />,
+        <FaBootstrap size={iconSize} />,
+        <FaGitAlt size={iconSize} />,
+        <FaLinux size={iconSize} />,
+        <SiPostgresql size={iconSize} />,
+        <SiSqlite size={iconSize} />,
+        <SiRabbitmq size={iconSize} />,
+        <SiDocker size={iconSize} />,
+        <SiAmazonaws size={iconSize} />,
     ];
 
     const stats = [
@@ -103,7 +117,6 @@ const ResumePage = () => {
                                     to the links on the top right of your
                                     screen.
                                 </p>
-                                <br></br>
                                 <p>
                                     My hobbies include playing guitar, reading
                                     One Piece and DC, playing video games, and
@@ -112,20 +125,23 @@ const ResumePage = () => {
                             </div>
                         </div>
                         <div>
-                            <div className="m-8 grid grid-cols-5 gap-4 justify-items-center">
-                                {skills.map((skill) => (
-                                    <img src={skill} width="50"></img>
-                                ))}
+                            <div className="my-8 grid grid-cols-5 gap-4 justify-items-center">
+                                {skills.map((skill) => skill)}
                             </div>
                         </div>
                         <div className="w-1/2 self-center">
                             <span className="text-2xl">misc stats</span>
-                            <ul className="list-item text-left">
+                            <ul className="list-item text-left text-base">
                                 {stats.map((stat) => (
                                     <li className="list-disc">{stat}</li>
                                 ))}
                             </ul>
                         </div>
+                        <img
+                            className="m-4 self-center"
+                            src={oliver}
+                            width={450}
+                        ></img>
                     </div>
                 </div>
             </div>
