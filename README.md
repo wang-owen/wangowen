@@ -1,3 +1,1 @@
-# wangowen.com
-
-http://wangowen.com
+# [wangowen.com](https://wangowen.com)
