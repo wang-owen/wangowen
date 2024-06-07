@@ -98,21 +98,21 @@ const ResumePage = () => {
                             Open PDF
                         </a>
                     </div>
-                    <div className="sm:ml-12 text-center flex flex-col justify-start w-full">
+                    <div className="sm:ml-12 text-center flex flex-col justify-between w-full">
                         <div>
                             <div className="m-5 text-4xl">Owen Wang</div>
                             <div className="text-lg">
                                 <p>
                                     &#128075; I'm a computer science student at
-                                    Carleton University
+                                    the University of Waterloo
                                 </p>
                             </div>
                             <br></br>
                             <div className="text-left text-base">
                                 <p>
                                     Greetings! My name is Owen Wang, and I'm
-                                    studying computer science at Carleton
-                                    University. You may be interested my
+                                    studying computer science at the University
+                                    of Waterloo. You may be interested my
                                     projects or resume, in which you may refer
                                     to the links on the top right of your
                                     screen.
