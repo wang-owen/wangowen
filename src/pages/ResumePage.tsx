@@ -1,8 +1,7 @@
+import { useState, useEffect } from "react";
 import { pdfjs, Document, Page } from "react-pdf";
 import "react-pdf/dist/Page/AnnotationLayer.css";
 import "react-pdf/dist/Page/TextLayer.css";
-import { useState, useEffect } from "react";
-import oliver from "../assets/img/Oliver.png";
 import {
     FaPython,
     FaJava,
@@ -31,6 +30,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
     "pdfjs-dist/build/pdf.worker.min.js",
     import.meta.url
 ).toString();
+import oliver from "../assets/img/Oliver.png";
 
 const ResumePage = () => {
     const iconSize = 50;
@@ -81,8 +81,8 @@ const ResumePage = () => {
     }, []);
 
     return (
-        <>
-            <div className="min-h-screen flex items-center justify-center">
+        <section id="resume" className="h-screen">
+            <div className="flex items-center justify-center">
                 <div className="w-5/6 flex flex-col sm:flex-row justify-between my-20 sm:my-8">
                     <div className="text-center animate-fadeInFromLeft">
                         <div className="w-min border border-gray-400 shadow-xl">
@@ -126,14 +126,18 @@ const ResumePage = () => {
                         </div>
                         <div>
                             <div className="my-8 grid grid-cols-5 gap-4 justify-items-center">
-                                {skills.map((skill) => skill)}
+                                {skills.map((skill, i) => (
+                                    <li key={i}>{skill}</li>
+                                ))}
                             </div>
                         </div>
                         <div className="w-1/2 self-center">
                             <span className="text-2xl">misc stats</span>
                             <ul className="list-item text-left text-base">
-                                {stats.map((stat) => (
-                                    <li className="list-disc">{stat}</li>
+                                {stats.map((stat, i) => (
+                                    <li className="list-disc" key={i}>
+                                        {stat}
+                                    </li>
                                 ))}
                             </ul>
                         </div>
@@ -145,7 +149,7 @@ const ResumePage = () => {
                     </div>
                 </div>
             </div>
-        </>
+        </section>
     );
 };
 
