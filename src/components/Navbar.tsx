@@ -1,19 +1,19 @@
-import { HashLink } from "react-router-hash-link";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
     const linkClass = "mx-2 hover:opacity-50 duration-300";
 
     return (
         <div className="fixed w-full p-5 text-end animate-fadeInFromTop">
-            <HashLink to="#" className={linkClass} smooth>
+            <Link to="/" className={linkClass}>
                 home
-            </HashLink>
-            <HashLink to="#resume" className={linkClass} smooth>
+            </Link>
+            <Link to="/resume" className={linkClass}>
                 resume
-            </HashLink>
-            <HashLink to="#projects" className={linkClass} smooth>
+            </Link>
+            <Link to="/projects" className={linkClass}>
                 projects
-            </HashLink>
+            </Link>
         </div>
     );
 };

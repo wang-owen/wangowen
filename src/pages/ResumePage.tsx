@@ -30,7 +30,6 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
     "pdfjs-dist/build/pdf.worker.min.js",
     import.meta.url
 ).toString();
-import oliver from "../assets/img/Oliver.png";
 
 const ResumePage = () => {
     const iconSize = 50;
@@ -127,7 +126,9 @@ const ResumePage = () => {
                         <div>
                             <div className="my-8 grid grid-cols-5 gap-4 justify-items-center">
                                 {skills.map((skill, i) => (
-                                    <li key={i}>{skill}</li>
+                                    <li className="list-none" key={i}>
+                                        {skill}
+                                    </li>
                                 ))}
                             </div>
                         </div>
@@ -141,11 +142,6 @@ const ResumePage = () => {
                                 ))}
                             </ul>
                         </div>
-                        <img
-                            className="m-4 self-center"
-                            src={oliver}
-                            width={450}
-                        ></img>
                     </div>
                 </div>
             </div>

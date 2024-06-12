@@ -1,6 +1,4 @@
 import Socials from "../components/Socials";
-import ProjectsPage from "./ProjectsPage";
-import ResumePage from "./ResumePage";
 
 const HomePage = () => {
     return (
@@ -18,8 +16,6 @@ const HomePage = () => {
                     </div>
                 </div>
             </section>
-            <ResumePage />
-            <ProjectsPage />
         </>
     );
 };
