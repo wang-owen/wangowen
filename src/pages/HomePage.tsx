@@ -3,7 +3,7 @@ import Socials from "../components/Socials";
 const HomePage = () => {
     return (
         <>
-            <section id="#">
+            <section id="#" className="animate-fadeIn">
                 <div className="h-screen flex items-center justify-center animate-fadeInFromBottom">
                     <div className="sm:h-2/5 flex flex-col justify-between items-center">
                         <h1 className="text-4xl">

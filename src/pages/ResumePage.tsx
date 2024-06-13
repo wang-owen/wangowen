@@ -83,7 +83,7 @@ const ResumePage = () => {
     }, []);
 
     return (
-        <section id="resume" className="h-screen">
+        <section id="resume" className="h-screen animate-fadeIn">
             <div className="flex items-center justify-center">
                 <div className="w-5/6 flex flex-col sm:flex-row justify-between my-20 sm:my-8">
                     <div className="text-center animate-fadeInFromLeft">
@@ -102,84 +102,88 @@ const ResumePage = () => {
                     </div>
                     <div className="sm:ml-12 text-center flex flex-col justify-between w-full h-min">
                         <div>
-                            <div className="m-5 text-4xl">Owen Wang</div>
-                            <div className="text-lg">
-                                <p>
-                                    &#128075; I'm a computer science student at
-                                    the University of Waterloo
-                                </p>
+                            <div className="animate-fadeInFromTop">
+                                <div className="m-5 text-4xl">Owen Wang</div>
+                                <div className="text-lg">
+                                    <p>
+                                        &#128075; I'm a computer science student
+                                        at the University of Waterloo
+                                    </p>
+                                </div>
                             </div>
                             <br></br>
-                            <div className="text-left text-base">
-                                <p>
-                                    I'm a second year computer science student
-                                    at the University of Waterloo.
-                                </p>
-                                <br></br>
-                                <p>
-                                    I'm constantly looking for opportunities to
-                                    learn new languages and technologies, and
-                                    aim to push my skills{" "}
-                                    <span className="group">
-                                        <span className="underline">
-                                            <i>even further beyond</i>
+                            <div className="animate-fadeInFromRight">
+                                <div className="text-left text-base">
+                                    <p>
+                                        I'm a second year computer science
+                                        student at the University of Waterloo.
+                                    </p>
+                                    <br></br>
+                                    <p>
+                                        I'm constantly looking for opportunities
+                                        to learn new languages and technologies,
+                                        and aim to push my skills{" "}
+                                        <span className="group">
+                                            <span className="underline">
+                                                <i>even further beyond</i>
+                                            </span>
+                                            <img
+                                                src={ssj3}
+                                                className="absolute scale-0 left-[58%] top-1/3 group-hover:scale-125 duration-300 rounded-3xl border-4 border-black shadow-2xl"
+                                            />
                                         </span>
-                                        <img
-                                            src={ssj3}
-                                            className="absolute scale-0 left-[58%] top-1/3 group-hover:scale-125 duration-300 rounded-3xl border-4 border-black shadow-2xl"
-                                        />
-                                    </span>
-                                    {" ⬅️"}
-                                </p>
-                                <br></br>
-                                <p>
-                                    Interested in robotics 🦾, real-time
-                                    applications ⏱️, networking 🌐, computer
-                                    vision 👁️, and server-side web development
-                                    🚀.
-                                </p>
-                                <br></br>
-                                <p>
-                                    Currently seeking an internship for Winter
-                                    2025 ❄️.
-                                </p>
-                                <br></br>
-                                <ul>
-                                    <li>
-                                        💻 Currently working on{" "}
-                                        <a
-                                            href="https://github.com/wang-owen/Brook"
-                                            target="_blank"
-                                            className="underline text-blue-700"
-                                        >
-                                            Brook
-                                        </a>
-                                    </li>
-                                    <li>
-                                        🕸 Take a peek at my{" "}
-                                        <a
-                                            href="https://wangowen.com"
-                                            target="_blank"
-                                            className="underline text-blue-700"
-                                        >
-                                            website
-                                        </a>
-                                    </li>
-                                    <li>
-                                        ✉️ Email me at{" "}
-                                        <a
-                                            href="mailto:contact@wangowen.com"
-                                            target="_blank"
-                                            className="underline text-blue-700"
-                                        >
-                                            contact@wangowen.com
-                                        </a>
-                                    </li>
-                                </ul>
+                                        {" ⬅️"}
+                                    </p>
+                                    <br></br>
+                                    <p>
+                                        Interested in robotics 🦾, real-time
+                                        applications ⏱️, networking 🌐, computer
+                                        vision 👁️, and server-side web
+                                        development 🚀.
+                                    </p>
+                                    <br></br>
+                                    <p>
+                                        Currently seeking an internship for
+                                        Winter 2025 ❄️.
+                                    </p>
+                                    <br></br>
+                                    <ul>
+                                        <li>
+                                            💻 Currently working on{" "}
+                                            <a
+                                                href="https://github.com/wang-owen/Brook"
+                                                target="_blank"
+                                                className="underline text-blue-700"
+                                            >
+                                                Brook
+                                            </a>
+                                        </li>
+                                        <li>
+                                            🕸 Take a peek at my{" "}
+                                            <a
+                                                href="https://wangowen.com"
+                                                target="_blank"
+                                                className="underline text-blue-700"
+                                            >
+                                                website
+                                            </a>
+                                        </li>
+                                        <li>
+                                            ✉️ Email me at{" "}
+                                            <a
+                                                href="mailto:contact@wangowen.com"
+                                                target="_blank"
+                                                className="underline text-blue-700"
+                                            >
+                                                contact@wangowen.com
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                         <div>
-                            <div className="my-8 grid grid-cols-5 gap-4 justify-items-center">
+                            <div className="my-8 grid grid-cols-5 gap-4 justify-items-center animate-fadeInFromRight">
                                 {skills.map((skill, i) => (
                                     <li className="list-none" key={i}>
                                         {skill}
@@ -187,7 +191,7 @@ const ResumePage = () => {
                                 ))}
                             </div>
                         </div>
-                        <div className="w-1/2 self-center">
+                        <div className="w-1/2 self-center animate-fadeInFromBottom">
                             <span className="text-2xl">misc stats</span>
                             <ul className="list-item text-left text-base">
                                 {stats.map((stat, i) => (
