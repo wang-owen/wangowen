@@ -1,12 +1,20 @@
+import { useContext } from "react";
 import mailIcon from "../assets/img/iosmail.png";
 import linkedinIcon from "../assets/img/linkedin-icon.svg";
 import githubIcon from "../assets/img/square-github.svg";
+import { ThemeContext } from "../layouts/MainLayout";
 
 const Socials = () => {
     const iconClass = "mx-1 size-14 hover:-translate-y-3 duration-500";
 
+    const theme = useContext(ThemeContext);
+
     return (
-        <div className="mb-2 p-1 bg-gray-300 bg-opacity-40 border border-gray-500 border-opacity-40 rounded-lg flex shadow-xl">
+        <div
+            className={`mb-2 p-1 ${
+                theme === "light" ? "bg-gray-300" : "bg-gray-700"
+            } bg-opacity-40 border border-gray-500 border-opacity-40 rounded-lg flex shadow-2xl`}
+        >
             <a
                 href="mailto:contact@wangowen.com"
                 target="_blank"

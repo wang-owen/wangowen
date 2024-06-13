@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { pdfjs, Document, Page } from "react-pdf";
 import "react-pdf/dist/Page/AnnotationLayer.css";
 import "react-pdf/dist/Page/TextLayer.css";
@@ -27,6 +27,7 @@ import {
 } from "react-icons/si";
 import { TbSql } from "react-icons/tb";
 import ssj3 from "../assets/img/ssj3.gif";
+import { ThemeContext } from "../layouts/MainLayout";
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
     "pdfjs-dist/build/pdf.worker.min.js",
@@ -81,6 +82,12 @@ const ResumePage = () => {
 
         return () => window.removeEventListener("resize", handleResize);
     }, []);
+
+    const theme = useContext(ThemeContext);
+
+    const linkClass = `underline ${
+        theme === "light" ? "text-blue-600" : "text-blue-500"
+    }`;
 
     return (
         <section id="resume" className="h-screen animate-fadeIn">
@@ -153,7 +160,7 @@ const ResumePage = () => {
                                             <a
                                                 href="https://github.com/wang-owen/Brook"
                                                 target="_blank"
-                                                className="underline text-blue-700"
+                                                className={linkClass}
                                             >
                                                 Brook
                                             </a>
@@ -163,7 +170,7 @@ const ResumePage = () => {
                                             <a
                                                 href="https://wangowen.com"
                                                 target="_blank"
-                                                className="underline text-blue-700"
+                                                className={linkClass}
                                             >
                                                 website
                                             </a>
@@ -173,7 +180,7 @@ const ResumePage = () => {
                                             <a
                                                 href="mailto:contact@wangowen.com"
                                                 target="_blank"
-                                                className="underline text-blue-700"
+                                                className={linkClass}
                                             >
                                                 contact@wangowen.com
                                             </a>

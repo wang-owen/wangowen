@@ -1,6 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, createContext } from "react";
 import { Outlet } from "react-router-dom";
 import Navbar from "../components/Navbar";
+
+export const ThemeContext = createContext("light");
 
 const MainLayout = () => {
     const page = document.querySelector("html");
@@ -24,11 +26,15 @@ const MainLayout = () => {
         <>
             <div
                 className={`${
-                    theme === "light" ? "bg-[#fffffa]" : "bg-slate-100"
-                } text-black duration-300 overflow-hidden`}
+                    theme === "light"
+                        ? "bg-[#fffffa] text-black"
+                        : "bg-slate-900 text-white"
+                } duration-300 overflow-hidden`}
             >
-                <Navbar theme={theme} toggleTheme={toggleTheme} />
-                <Outlet />
+                <ThemeContext.Provider value={theme}>
+                    <Navbar toggleTheme={toggleTheme} />
+                    <Outlet />
+                </ThemeContext.Provider>
             </div>
         </>
     );

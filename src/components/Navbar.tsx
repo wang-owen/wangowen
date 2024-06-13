@@ -1,13 +1,9 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { MdOutlineLightMode, MdOutlineDarkMode } from "react-icons/md";
+import { ThemeContext } from "../layouts/MainLayout";
 
-const Navbar = ({
-    theme,
-    toggleTheme,
-}: {
-    theme: string;
-    toggleTheme: () => void;
-}) => {
+const Navbar = ({ toggleTheme }: { toggleTheme: () => void }) => {
     const linkClass = "mx-2 hover:opacity-50 duration-300";
 
     return (
@@ -17,7 +13,7 @@ const Navbar = ({
                     type="checkbox"
                     className="theme-controller"
                     onChange={toggleTheme}
-                    checked={theme === "dark"}
+                    checked={useContext(ThemeContext) === "dark"}
                 />
                 <MdOutlineLightMode className="swap-off" size={25} />
                 <MdOutlineDarkMode className="swap-on" size={25} />
