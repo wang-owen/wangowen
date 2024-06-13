@@ -1,6 +1,6 @@
-import mailIcon from "../assets/img/icons/iosmail.png";
-import linkedinIcon from "../assets/img/icons/linkedin-icon.svg";
-import githubIcon from "../assets/img/icons/square-github.svg";
+import mailIcon from "../assets/img/iosmail.png";
+import linkedinIcon from "../assets/img/linkedin-icon.svg";
+import githubIcon from "../assets/img/square-github.svg";
 
 const Socials = () => {
     const iconClass = "mx-1 size-14 hover:-translate-y-3 duration-500";

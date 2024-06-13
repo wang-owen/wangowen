@@ -25,6 +25,7 @@ import {
     SiAmazonaws,
 } from "react-icons/si";
 import { TbSql } from "react-icons/tb";
+import ssj3 from "../assets/img/ssj3.gif";
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
     "pdfjs-dist/build/pdf.worker.min.js",
@@ -62,14 +63,14 @@ const ResumePage = () => {
         "1000 bedwars wins",
     ];
 
-    const [pageWidth, setPageWidth] = useState(window.innerWidth * 0.75);
+    const [pageWidth, setPageWidth] = useState(window.innerWidth);
 
     useEffect(() => {
         const handleResize = () => {
             if (window.innerWidth >= 640) {
-                setPageWidth((window.innerWidth * 2) / 5);
+                setPageWidth(window.innerWidth / 2.61);
             } else {
-                setPageWidth(window.innerWidth * 0.85);
+                setPageWidth(window.innerWidth * 0.815);
             }
         };
 
@@ -97,7 +98,7 @@ const ResumePage = () => {
                             Open PDF
                         </a>
                     </div>
-                    <div className="sm:ml-12 text-center flex flex-col justify-between w-full">
+                    <div className="sm:ml-12 text-center flex flex-col justify-between w-full h-min">
                         <div>
                             <div className="m-5 text-4xl">Owen Wang</div>
                             <div className="text-lg">
@@ -109,18 +110,70 @@ const ResumePage = () => {
                             <br></br>
                             <div className="text-left text-base">
                                 <p>
-                                    Greetings! My name is Owen Wang, and I'm
-                                    studying computer science at the University
-                                    of Waterloo. You may be interested my
-                                    projects or resume, in which you may refer
-                                    to the links on the top right of your
-                                    screen.
+                                    I'm a second year computer science student
+                                    at the University of Waterloo.
                                 </p>
+                                <br></br>
                                 <p>
-                                    My hobbies include playing guitar, reading
-                                    One Piece and DC, playing video games, and
-                                    watching movies & TV shows!
+                                    I'm constantly looking for opportunities to
+                                    learn new languages and technologies, and
+                                    aim to push my skills{" "}
+                                    <span className="group">
+                                        <span className="underline">
+                                            <i>even further beyond</i>
+                                        </span>
+                                        <img
+                                            src={ssj3}
+                                            className="absolute scale-0 group-hover:scale-100 origin-[25%_0%] duration-300 rounded-3xl border-4 border-black shadow-2xl"
+                                        />
+                                    </span>
+                                    {" ⬅️"}
                                 </p>
+                                <br></br>
+                                <p>
+                                    Interested in robotics 🦾, real-time
+                                    applications ⏱️, networking 🌐, computer
+                                    vision 👁️, and server-side web development
+                                    🚀.
+                                </p>
+                                <br></br>
+                                <p>
+                                    Currently seeking an internship for Winter
+                                    2025 ❄️.
+                                </p>
+                                <br></br>
+                                <ul>
+                                    <li>
+                                        💻 Currently working on{" "}
+                                        <a
+                                            href="https://github.com/wang-owen/Brook"
+                                            target="_blank"
+                                            className="underline text-blue-700"
+                                        >
+                                            Brook
+                                        </a>
+                                    </li>
+                                    <li>
+                                        🕸 Take a peek at my{" "}
+                                        <a
+                                            href="https://wangowen.com"
+                                            target="_blank"
+                                            className="underline text-blue-700"
+                                        >
+                                            website
+                                        </a>
+                                    </li>
+                                    <li>
+                                        ✉️ Email me at{" "}
+                                        <a
+                                            href="mailto:contact@wangowen.com"
+                                            target="_blank"
+                                            className="underline text-blue-700"
+                                        >
+                                            contact@wangowen.com
+                                        </a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                         <div>
