@@ -16,6 +16,7 @@ import {
 } from "react-icons/fa6";
 import {
     SiTypescript,
+    SiC,
     SiDjango,
     SiTailwindcss,
     SiPostgresql,
@@ -39,10 +40,11 @@ const ResumePage = () => {
         <FaJava size={iconSize} />,
         <FaJs size={iconSize} />,
         <SiTypescript size={iconSize} />,
+        <SiC size={iconSize} />,
+        <TbSql size={iconSize} />,
         <FaHtml5 size={iconSize} />,
         <FaCss3 size={iconSize} />,
         <FaSass size={iconSize} />,
-        <TbSql size={iconSize} />,
         <SiDjango size={iconSize} />,
         <FaReact size={iconSize} />,
         <SiTailwindcss size={iconSize} />,
@@ -124,7 +126,7 @@ const ResumePage = () => {
                                         </span>
                                         <img
                                             src={ssj3}
-                                            className="absolute scale-0 group-hover:scale-100 origin-[25%_0%] duration-300 rounded-3xl border-4 border-black shadow-2xl"
+                                            className="absolute scale-0 left-[58%] top-1/3 group-hover:scale-125 duration-300 rounded-3xl border-4 border-black shadow-2xl"
                                         />
                                     </span>
                                     {" ⬅️"}

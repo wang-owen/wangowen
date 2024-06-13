@@ -25,7 +25,10 @@ const ProjectsPage = () => {
     }
 
     return (
-        <section id="projects" className="flex justify-center items-center h-screen">
+        <section
+            id="projects"
+            className="flex justify-center items-center h-screen"
+        >
             <div className="mt-20 w-5/6 grid grid-cols-3 gap-3">
                 {repos.map((repo: Repository) => (
                     <ProjectCard

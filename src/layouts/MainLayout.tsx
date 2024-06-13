@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar";
 const MainLayout = () => {
     return (
         <>
-            <div className="bg-[#fffffa]">
+            <div className="bg-[#fffffa] text-black">
                 <Navbar />
                 <Outlet />
             </div>
