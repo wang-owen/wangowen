@@ -9,25 +9,31 @@ const ProjectsPage = () => {
         >
             <div className="flex justify-center">
                 <div className="flex flex-col justify-center items-center gap-6 w-2/3 my-24">
-                    <ProjectCardLg
-                        title="Brook"
-                        description="Music streaming service replacement | Download music from YouTube/Spotify and track changes to existing playlists"
-                        link="https://github.com/wang-owen/Brook"
-                        img="https://github.com/wang-owen/Brook/blob/main/client/public/screenshots/homepage.png?raw=true"
-                    />
-                    <ProjectCardLg
-                        title="Internsheet"
-                        description="Spreadsheet but for internship applications | Track application information, rejections, interviews, and offers"
-                        link="https://github.com/wang-owen/Internsheet"
-                        img="https://github.com/wang-owen/Internsheet/assets/69203168/98f1a7a1-c289-4d77-a33b-2f5b58d9f93c"
-                    />
-                    <ProjectCardLg
-                        title="JBKR Mobile"
-                        description="JBKR Mobile (Java Brokers Mobile) is a stock trading simulator with real-time stock market data sourced from the NYSE and Nasdaq."
-                        link="https://github.com/wang-owen/JBKR-Mobile"
-                        img="https://github.com/wang-owen/JBKR-Mobile/assets/69203168/9bc91515-cfc4-459c-a814-54f108e8fa7a"
-                    />
-                    <div className="grid grid-cols-4 gap-4 w-full place-items-center">
+                    <div className="animate-zoomInFromLeft w-full">
+                        <ProjectCardLg
+                            title="Brook"
+                            description="Music streaming service replacement | Download music from YouTube/Spotify and track changes to existing playlists"
+                            link="https://github.com/wang-owen/Brook"
+                            img="https://github.com/wang-owen/Brook/blob/main/client/public/screenshots/homepage.png?raw=true"
+                        />
+                    </div>
+                    <div className="animate-zoomInFromRight w-full">
+                        <ProjectCardLg
+                            title="Internsheet"
+                            description="Spreadsheet but for internship applications | Track application information, rejections, interviews, and offers"
+                            link="https://github.com/wang-owen/Internsheet"
+                            img="https://github.com/wang-owen/Internsheet/assets/69203168/98f1a7a1-c289-4d77-a33b-2f5b58d9f93c"
+                        />
+                    </div>
+                    <div className="animate-zoomInFromLeft w-full">
+                        <ProjectCardLg
+                            title="JBKR Mobile"
+                            description="JBKR Mobile (Java Brokers Mobile) is a stock trading simulator with real-time stock market data sourced from the NYSE and Nasdaq."
+                            link="https://github.com/wang-owen/JBKR-Mobile"
+                            img="https://github.com/wang-owen/JBKR-Mobile/assets/69203168/9bc91515-cfc4-459c-a814-54f108e8fa7a"
+                        />
+                    </div>
+                    <div className="grid grid-cols-4 gap-4 w-full place-items-center animate-fadeInFromBottom">
                         <ProjectCardSm
                             title="Local Superchat"
                             description="Multithreaded public chat over local network"

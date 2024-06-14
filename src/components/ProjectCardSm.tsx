@@ -16,8 +16,10 @@ const ProjectCardSm = ({
     const theme = useContext(ThemeContext);
     return (
         <div
-            className={`card w-64 h-64 bg-base-100 shadow-2xl image-full border hover:-translate-y-2 duration-300 ${
-                theme === "light" ? "border-black" : "border-white shadow-white"
+            className={`card w-64 h-64 bg-base-100 image-full border hover:-translate-y-2 duration-300 ${
+                theme === "light"
+                    ? "border-black hover:shadow-2xl"
+                    : "border-white hover:shadow-2xl hover:shadow-white"
             }`}
         >
             <figure>
