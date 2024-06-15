@@ -8,7 +8,7 @@ const ProjectsPage = () => {
             className="animate-fadeIn h-screen overflow-auto"
         >
             <div className="flex justify-center">
-                <div className="flex flex-col justify-center items-center gap-6 w-2/3 my-24">
+                <div className="flex flex-col justify-center items-center gap-6 w-1/2 my-24">
                     <div className="animate-zoomInFromLeft w-full">
                         <ProjectCardLg
                             title="Brook"
@@ -33,7 +33,7 @@ const ProjectsPage = () => {
                             img="https://github.com/wang-owen/JBKR-Mobile/assets/69203168/9bc91515-cfc4-459c-a814-54f108e8fa7a"
                         />
                     </div>
-                    <div className="grid grid-cols-4 gap-4 w-full place-items-center animate-fadeInFromBottom">
+                    <div className="grid grid-cols-3 gap-9 w-full place-items-center animate-fadeInFromBottom">
                         <ProjectCardSm
                             title="Local Superchat"
                             description="Multithreaded public chat over local network"

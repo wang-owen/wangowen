@@ -92,7 +92,7 @@ const ResumePage = () => {
     return (
         <section id="resume" className="h-screen animate-fadeIn">
             <div className="flex items-center justify-center">
-                <div className="w-5/6 flex flex-col sm:flex-row justify-between my-20 sm:my-8">
+                <div className="w-3/4 flex flex-col sm:flex-row justify-between my-20 sm:my-8">
                     <div className="text-center animate-fadeInFromLeft">
                         <div className="w-min border border-gray-400 shadow-xl">
                             <Document file="Owen Wang Resume.pdf">
