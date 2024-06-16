@@ -3,6 +3,7 @@ import { pdfjs, Document, Page } from "react-pdf";
 import "react-pdf/dist/Page/AnnotationLayer.css";
 import "react-pdf/dist/Page/TextLayer.css";
 import {
+    FaApple,
     FaPython,
     FaJava,
     FaJs,
@@ -147,6 +148,11 @@ const ResumePage = () => {
                                         applications ⏱️, networking 🌐, computer
                                         vision 👁️, and server-side web
                                         development 🚀.
+                                    </p>
+                                    <br></br>
+                                    <p>
+                                        Apple enthusiast{" "}
+                                        <FaApple className="inline mb-1" />
                                     </p>
                                     <br></br>
                                     <p>
