@@ -6,9 +6,7 @@ export const ThemeContext = createContext("light");
 
 const MainLayout = () => {
     const page = document.querySelector("html");
-    const [theme, setTheme] = useState(
-        localStorage.getItem("theme") || "light"
-    );
+    const [theme, setTheme] = useState(localStorage.getItem("theme") || "dark");
     const toggleTheme = () => {
         localStorage.setItem("theme", theme === "light" ? "dark" : "light");
         setTheme(theme === "light" ? "dark" : "light");
@@ -27,8 +25,8 @@ const MainLayout = () => {
             <div
                 className={`${
                     theme === "light"
-                        ? "bg-[#fffffa] text-black"
-                        : "bg-slate-900 text-white"
+                        ? "bg-gradient-to-bl from-white via-zinc-300 to-white text-black"
+                        : "bg-gradient-to-bl from-black via-slate-950 to-black text-white"
                 } duration-300 overflow-hidden`}
             >
                 <ThemeContext.Provider value={theme}>

@@ -15,8 +15,8 @@ const HomePage = () => {
                         <h1
                             className={`m-12 text-6xl sm:text-8xl h-full bg-gradient-to-r ${
                                 theme === "light"
-                                    ? "from-blue-600 via-green-500 to-indigo-400"
-                                    : "from-blue-400 via-purple-400 to-blue-500"
+                                    ? "from-blue-600 via-green-500 to-indigo-500"
+                                    : "from-blue-700 via-purple-600 to-blue-600"
                             } text-transparent bg-clip-text flex items-center font-semibold text-center leading-tight hover:scale-110 duration-200`}
                         >
                             Owen Wang

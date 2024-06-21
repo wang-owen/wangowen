@@ -86,6 +86,21 @@ const ResumePage = () => {
 
     const theme = useContext(ThemeContext);
 
+    const [isHovered, setIsHovered] = useState(false);
+    const [pos, setPos] = useState({ x: 0, y: 0 });
+
+    useEffect(() => {
+        const handleMouseMove = (event: MouseEvent) => {
+            setPos({ x: event.clientX, y: event.clientY });
+        };
+
+        if (isHovered) {
+            window.addEventListener("mousemove", handleMouseMove);
+        } else {
+            window.removeEventListener("mousemove", handleMouseMove);
+        }
+    }, [isHovered]);
+
     const linkClass = `underline ${
         theme === "light" ? "text-blue-600" : "text-blue-500"
     }`;
@@ -132,13 +147,28 @@ const ResumePage = () => {
                                         to learn new languages and technologies,
                                         and aim to push my skills{" "}
                                         <span className="group">
-                                            <span className="underline">
+                                            <span
+                                                className="underline"
+                                                onMouseEnter={() =>
+                                                    setIsHovered(true)
+                                                }
+                                                onMouseLeave={() =>
+                                                    setIsHovered(false)
+                                                }
+                                            >
                                                 <i>even further beyond</i>
                                             </span>
-                                            <img
-                                                src={ssj3}
-                                                className="absolute scale-0 left-[58%] top-1/3 group-hover:scale-125 duration-300 rounded-3xl border-4 border-black shadow-2xl"
-                                            />
+                                            {isHovered && (
+                                                <img
+                                                    src={ssj3}
+                                                    alt="SSJ3"
+                                                    className="absolute w-64 h-64 rounded-xl"
+                                                    style={{
+                                                        top: pos.y + 10 + "px",
+                                                        left: pos.x + 10 + "px",
+                                                    }}
+                                                />
+                                            )}
                                         </span>
                                         {" ⬅️"}
                                     </p>

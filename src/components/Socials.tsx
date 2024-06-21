@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import mailIcon from "../assets/img/iosmail.png";
-import linkedinIcon from "../assets/img/linkedin-icon.svg";
-import githubIcon from "../assets/img/square-github.svg";
+import linkedinIcon from "../assets/img/linkedin-icon.png";
+import githubIcon from "../assets/img/github-icon.svg";
 import { ThemeContext } from "../layouts/MainLayout";
 
 const Socials = () => {
