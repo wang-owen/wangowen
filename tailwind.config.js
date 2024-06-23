@@ -3,6 +3,9 @@ export default {
     content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
     theme: {
         extend: {
+            fontFamily: {
+                openSans: ["Open Sans"]
+            },
             keyframes: {
                 fadeIn: {
                     "0%": { opacity: "0" },
