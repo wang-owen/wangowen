@@ -3,9 +3,6 @@ import { ThemeContext } from "../layouts/MainLayout";
 import { Link } from "react-router-dom";
 import Socials from "../components/Socials";
 import ssj3 from "../assets/img/ssj3.gif";
-import { IoBarbell } from "react-icons/io5";
-import { SiLeagueoflegends } from "react-icons/si";
-import { FaBed } from "react-icons/fa6";
 import Carousel from "../components/Carousel";
 
 const HomePage = () => {
@@ -27,11 +24,11 @@ const HomePage = () => {
     }, [isHovered]);
 
     return (
-        <section className="flex flex-col self-center justify-center lg:gap-12">
+        <section className="flex flex-col self-center justify-center lg:gap-8">
             <div className="flex justify-center px-8 lg:px-16">
-                <div className="flex flex-col lg:flex-row justify-between gap-8 lgw-2/3">
+                <div className="flex flex-col lg:flex-row justify-between lg:w-2/3 gap-8">
                     <div
-                        className={`relative animate-fadeInFromLeft flex flex-col gap-8 h-full ${
+                        className={`relative animate-fadeInFromLeft flex flex-col gap-8 h-full lg:w-1/2 ${
                             theme === "light" ? "text-black" : "text-white"
                         }`}
                     >
@@ -62,7 +59,7 @@ const HomePage = () => {
                                             <img
                                                 src={ssj3}
                                                 alt="SSJ3"
-                                                className={`fixed z-10 w-1/2 lg:w-auto h-auto rounded-box shadow-2xl ${
+                                                className={`fixed z-10 w-96 max-w-[50%] h-auto rounded-box shadow-2xl ${
                                                     theme === "dark" &&
                                                     "shadow-white"
                                                 }`}
@@ -102,44 +99,9 @@ const HomePage = () => {
                             </div>
                         </div>
                     </div>
-
-                    <div className="relative flex flex-col lg:flex-row items-center animate-fadeIn">
-                        <div className="flex flex-col items-center gap-8">
-                            <img src="lofi knight.png" width={350} />
-                            <div className="stats stats-vertical lg:stats-horizontal w-min overflow-hidden">
-                                <div className="stat">
-                                    <div className="stat-figure text-primary">
-                                        <IoBarbell size={30} />
-                                    </div>
-                                    <div className="stat-title">Bench</div>
-                                    <div className="stat-value">185 lbs</div>
-                                    <div className="stat-desc">Mar 2024</div>
-                                </div>
-
-                                <div className="stat">
-                                    <div className="stat-figure text-primary">
-                                        <SiLeagueoflegends size={30} />
-                                    </div>
-                                    <div className="stat-title">League</div>
-                                    <div className="stat-value">Masters</div>
-                                    <div className="stat-desc">221 LP</div>
-                                </div>
-
-                                <div className="stat">
-                                    <div className="stat-figure text-primary">
-                                        <FaBed size={30} />
-                                    </div>
-                                    <div className="stat-title">
-                                        Bedwars Wins
-                                    </div>
-                                    <div className="stat-value">1,000</div>
-                                    <div className="stat-desc">May 5, 2024</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="lg:absolute lg:right-8 lg:-translate-y-1/3 w-fit my-8 lg:m-0">
-                            <Socials />
-                        </div>
+                    <div className="relative flex flex-col items-center gap-8 animate-fadeIn">
+                        <img src="lofi knight.png" width={350} />
+                        <Socials />
                     </div>
                 </div>
             </div>
