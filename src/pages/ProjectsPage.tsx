@@ -3,13 +3,10 @@ import ProjectCardSm from "../components/ProjectCardSm";
 
 const ProjectsPage = () => {
     return (
-        <section
-            id="projects"
-            className="animate-fadeIn h-screen overflow-auto"
-        >
-            <div className="flex justify-center">
-                <div className="flex flex-col justify-center items-center gap-6 w-1/2 my-24">
-                    <div className="animate-zoomInFromLeft w-full">
+        <section>
+            <div className="flex justify-center animate-fadeIn">
+                <div className="flex flex-col justify-center items-center gap-6 w-1/2 my-8">
+                    <div className="w-full">
                         <ProjectCardLg
                             title="Brook"
                             description="Music streaming service replacement | Download music from YouTube/Spotify and track changes to existing playlists"
@@ -17,7 +14,7 @@ const ProjectsPage = () => {
                             img="https://github.com/wang-owen/Brook/blob/main/client/public/screenshots/homepage.png?raw=true"
                         />
                     </div>
-                    <div className="animate-zoomInFromRight w-full">
+                    <div className="w-full">
                         <ProjectCardLg
                             title="Internsheet"
                             description="Spreadsheet but for internship applications | Track application information, rejections, interviews, and offers"
@@ -25,7 +22,7 @@ const ProjectsPage = () => {
                             img="https://github.com/wang-owen/Internsheet/assets/69203168/98f1a7a1-c289-4d77-a33b-2f5b58d9f93c"
                         />
                     </div>
-                    <div className="animate-zoomInFromLeft w-full">
+                    <div className="w-full">
                         <ProjectCardLg
                             title="JBKR Mobile"
                             description="JBKR Mobile (Java Brokers Mobile) is a stock trading simulator with real-time stock market data sourced from the NYSE and Nasdaq."
@@ -33,7 +30,7 @@ const ProjectsPage = () => {
                             img="https://github.com/wang-owen/JBKR-Mobile/assets/69203168/9bc91515-cfc4-459c-a814-54f108e8fa7a"
                         />
                     </div>
-                    <div className="grid grid-cols-3 gap-9 w-full place-items-center animate-fadeInFromBottom">
+                    <div className="grid grid-cols-3 gap-9 w-full place-items-center">
                         <ProjectCardSm
                             title="Local Superchat"
                             description="Multithreaded public chat over local network"

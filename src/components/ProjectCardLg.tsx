@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import { FaGithub } from "react-icons/fa6";
 import { ThemeContext } from "../layouts/MainLayout";
+import { FaGithub } from "react-icons/fa6";
 
 const ProjectCardLg = ({
     title,
@@ -14,13 +14,12 @@ const ProjectCardLg = ({
     img: string;
 }) => {
     const theme = useContext(ThemeContext);
+
     return (
         <div
-            className={`card lg:card-side bg-base-100 w-full border hover:-translate-y-2 duration-300 ${
-                theme === "light"
-                    ? "border-black hover:shadow-2xl"
-                    : "border-white hover:shadow-2xl hover:shadow-white"
-            }`}
+            className={`card lg:card-side bg-base-300 w-full hover:shadow-2xl ${
+                theme === "dark" && "hover:shadow-white"
+            } duration-300`}
         >
             <figure>
                 <img className="w-96" src={img} />
@@ -33,9 +32,7 @@ const ProjectCardLg = ({
                         role="button"
                         href={link}
                         target="_blank"
-                        className={`btn btn-square ${
-                            theme === "dark" ? "bg-gray-600" : ""
-                        }`}
+                        className="btn btn-square"
                     >
                         <FaGithub size={30} />
                     </a>
