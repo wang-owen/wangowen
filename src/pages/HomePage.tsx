@@ -44,7 +44,7 @@ const HomePage = () => {
                                     I'm constantly looking for opportunities to
                                     learn new languages and technologies, and
                                     aim to push my skills{" "}
-                                    <span className="group italic font-bold underline">
+                                    <span className="group">
                                         <span
                                             onMouseEnter={() =>
                                                 setIsHovered(true)
@@ -53,7 +53,13 @@ const HomePage = () => {
                                                 setIsHovered(false)
                                             }
                                         >
-                                            even further beyond
+                                            <a
+                                                className="italic font-bold underline hover:opacity-50 duration-300 hover:cursor-ne-resize"
+                                                href="https://www.youtube.com/watch?v=8TGalu36BHA"
+                                                target="_blank"
+                                            >
+                                                even further beyond
+                                            </a>
                                         </span>
                                         {isHovered && (
                                             <img
