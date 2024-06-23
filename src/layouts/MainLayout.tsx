@@ -1,6 +1,8 @@
 import { useState, useEffect, createContext } from "react";
 import { Outlet } from "react-router-dom";
 import Navbar from "../components/Navbar";
+import bgDark from "../assets/img/bg-dark.png";
+import bgLight from "../assets/img/bg-light.png";
 
 export const ThemeContext = createContext("dark");
 
@@ -24,7 +26,10 @@ const MainLayout = () => {
         <main
             className={`${
                 theme === "light" ? "bg-zinc-100" : "bg-zinc-900"
-            } duration-300 font-openSans`}
+            } font-openSans bg-contain duration-700`}
+            style={{
+                backgroundImage: `url(${theme === "light" ? bgLight : bgDark})`,
+            }}
         >
             <ThemeContext.Provider value={theme}>
                 <div className="grid grid-rows-[auto_1fr] min-h-screen">
