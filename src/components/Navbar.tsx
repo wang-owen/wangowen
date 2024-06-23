@@ -21,6 +21,9 @@ const Navbar = ({ toggleTheme }: { toggleTheme: () => void }) => {
             <Link to="/" className={linkClass}>
                 home
             </Link>
+            <Link to="/projects" className={linkClass}>
+                projects
+            </Link>
             <a
                 href="Owen Wang Resume.pdf"
                 target="_blank"
@@ -28,9 +31,6 @@ const Navbar = ({ toggleTheme }: { toggleTheme: () => void }) => {
             >
                 resume
             </a>
-            <Link to="/projects" className={linkClass}>
-                projects
-            </Link>
         </div>
     );
 };
