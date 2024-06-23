@@ -27,9 +27,9 @@ const HomePage = () => {
     }, [isHovered]);
 
     return (
-        <section className="flex flex-col self-center justify-center gap-12">
-            <div className="flex justify-center px-16">
-                <div className="flex justify-between gap-8 w-2/3">
+        <section className="flex flex-col self-center justify-center lg:gap-12">
+            <div className="flex justify-center px-8 lg:px-16">
+                <div className="flex flex-col lg:flex-row justify-between gap-8 lgw-2/3">
                     <div
                         className={`relative animate-fadeInFromLeft flex flex-col gap-8 h-full ${
                             theme === "light" ? "text-black" : "text-white"
@@ -103,10 +103,10 @@ const HomePage = () => {
                         </div>
                     </div>
 
-                    <div className="relative flex items-center animate-fadeIn">
+                    <div className="relative flex flex-col lg:flex-row items-center animate-fadeIn">
                         <div className="flex flex-col items-center gap-8">
                             <img src="lofi knight.png" width={350} />
-                            <div className="stats w-min">
+                            <div className="stats stats-vertical lg:stats-horizontal w-min overflow-hidden">
                                 <div className="stat">
                                     <div className="stat-figure text-primary">
                                         <IoBarbell size={30} />
@@ -137,13 +137,13 @@ const HomePage = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="absolute right-8 transform -translate-y-1/3 w-fit">
+                        <div className="lg:absolute lg:right-8 lg:-translate-y-1/3 w-fit my-8 lg:m-0">
                             <Socials />
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="animate-fadeIn">
+            <div className="animate-fadeIn flex justify-center">
                 <Carousel />
             </div>
         </section>

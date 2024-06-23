@@ -13,7 +13,7 @@ const Socials = () => {
         <div
             className={`p-1 ${
                 theme === "light" ? "bg-gray-300" : "bg-gray-700"
-            } bg-opacity-40 border border-gray-500 border-opacity-40 rounded-lg flex flex-col gap-2 h-min shadow`}
+            } bg-opacity-40 border border-gray-500 border-opacity-40 rounded-lg flex lg:flex-col lg:gap-2 h-min shadow`}
         >
             <a
                 href="mailto:contact@wangowen.com"

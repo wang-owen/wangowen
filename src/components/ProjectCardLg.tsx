@@ -22,9 +22,9 @@ const ProjectCardLg = ({
             } duration-300`}
         >
             <figure>
-                <img className="w-96" src={img} />
+                <img className="lg:w-96" src={img} />
             </figure>
-            <div className="card-body w-min">
+            <div className="card-body lg:w-min">
                 <h2 className="card-title">{title}</h2>
                 <p>{description}</p>
                 <div className="card-actions justify-end">

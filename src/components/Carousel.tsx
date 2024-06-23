@@ -2,7 +2,7 @@ import CarouselCard from "./CarouselCard";
 
 const Carousel = () => {
     return (
-        <div className="carousel carousel-center max-w-full space-x-4 p-4">
+        <div className="carousel carousel-center w-[95vw] space-x-4 p-4">
             <div className="carousel-item">
                 <CarouselCard
                     img="https://github.com/wang-owen/Brook/blob/main/client/public/screenshots/homepage.png?raw=true"

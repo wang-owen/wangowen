@@ -4,8 +4,8 @@ import ProjectCardSm from "../components/ProjectCardSm";
 const ProjectsPage = () => {
     return (
         <section>
-            <div className="flex justify-center animate-fadeIn">
-                <div className="flex flex-col justify-center items-center gap-6 w-1/2 my-8">
+            <div className="flex justify-center animate-fadeIn p-8 lg:p-0">
+                <div className="flex flex-col justify-center items-center gap-6 lg:w-1/2 my-8">
                     <div className="w-full">
                         <ProjectCardLg
                             title="Brook"
@@ -30,7 +30,7 @@ const ProjectsPage = () => {
                             img="https://github.com/wang-owen/JBKR-Mobile/assets/69203168/9bc91515-cfc4-459c-a814-54f108e8fa7a"
                         />
                     </div>
-                    <div className="grid grid-cols-3 gap-9 w-full place-items-center">
+                    <div className="grid grid-cols-2 lg:grid-cols-3 gap-9 w-full place-items-center">
                         <ProjectCardSm
                             title="Local Superchat"
                             description="Multithreaded public chat over local network"
