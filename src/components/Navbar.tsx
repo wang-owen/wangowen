@@ -27,7 +27,7 @@ const Navbar = ({ toggleTheme }: { toggleTheme: () => void }) => {
             <a
                 href="Owen Wang Resume.pdf"
                 target="_blank"
-                className={linkClass}
+                className={`${linkClass} cursor-ne-resize`}
             >
                 resume
             </a>

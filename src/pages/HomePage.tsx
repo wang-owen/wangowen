@@ -85,7 +85,7 @@ const HomePage = () => {
                                     check out my{" "}
                                     <Link
                                         to="/projects"
-                                        className="italic underline"
+                                        className="underline hover:opacity-50 duration-300"
                                     >
                                         projects
                                     </Link>{" "}
@@ -93,7 +93,7 @@ const HomePage = () => {
                                     <a
                                         href="Owen Wang Resume.pdf"
                                         target="_blank"
-                                        className="italic underline"
+                                        className="underline hover:opacity-50 duration-300 cursor-ne-resize"
                                     >
                                         resume
                                     </a>
