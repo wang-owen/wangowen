@@ -24,8 +24,8 @@ const MainLayout = () => {
         <>
             <main
                 className={`${
-                    theme === "light" ? "bg-white" : "bg-zinc-950"
-                } duration-300 min-h-screen font-openSans`}
+                    theme === "light" ? "bg-zinc-100" : "bg-zinc-900"
+                } duration-300 min-h-screen h-max font-openSans`}
             >
                 <ThemeContext.Provider value={theme}>
                     <Navbar toggleTheme={toggleTheme} />
