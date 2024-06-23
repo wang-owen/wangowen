@@ -21,18 +21,18 @@ const MainLayout = () => {
     }, [theme]);
 
     return (
-        <>
-            <main
-                className={`${
-                    theme === "light" ? "bg-zinc-100" : "bg-zinc-900"
-                } duration-300 min-h-screen h-max font-openSans`}
-            >
-                <ThemeContext.Provider value={theme}>
+        <main
+            className={`${
+                theme === "light" ? "bg-zinc-100" : "bg-zinc-900"
+            } duration-300 font-openSans`}
+        >
+            <ThemeContext.Provider value={theme}>
+                <div className="grid grid-rows-[auto_1fr] min-h-screen">
                     <Navbar toggleTheme={toggleTheme} />
                     <Outlet />
-                </ThemeContext.Provider>
-            </main>
-        </>
+                </div>
+            </ThemeContext.Provider>
+        </main>
     );
 };
 
