@@ -11,14 +11,13 @@ const Socials = () => {
 
     return (
         <div
-            className={`mb-2 p-1 ${
+            className={`p-1 ${
                 theme === "light" ? "bg-gray-300" : "bg-gray-700"
-            } bg-opacity-40 border border-gray-500 border-opacity-40 rounded-lg flex shadow-2xl`}
+            } bg-opacity-40 border border-gray-500 border-opacity-40 rounded-lg flex flex-col gap-2 h-min shadow`}
         >
             <a
                 href="mailto:contact@wangowen.com"
                 target="_blank"
-                className="tooltip"
                 data-tip="Email"
             >
                 <img src={mailIcon} className={iconClass}></img>
@@ -26,7 +25,6 @@ const Socials = () => {
             <a
                 href="https://www.linkedin.com/in/o-wang/"
                 target="_blank"
-                className="tooltip"
                 data-tip="LinkedIn"
             >
                 <img src={linkedinIcon} className={iconClass}></img>
@@ -34,7 +32,6 @@ const Socials = () => {
             <a
                 href="https://github.com/wang-owen/"
                 target="_blank"
-                className="tooltip"
                 data-tip="GitHub"
             >
                 <img src={githubIcon} className={iconClass}></img>

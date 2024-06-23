@@ -7,7 +7,7 @@ const Navbar = ({ toggleTheme }: { toggleTheme: () => void }) => {
     const linkClass = "mx-2 hover:opacity-50 duration-300";
 
     return (
-        <div className="fixed w-full p-5 text-end animate-fadeInFromTop">
+        <div className="w-full p-5 text-end animate-fadeInFromTop">
             <label className="swap swap-rotate float-left">
                 <input
                     type="checkbox"
@@ -21,9 +21,13 @@ const Navbar = ({ toggleTheme }: { toggleTheme: () => void }) => {
             <Link to="/" className={linkClass}>
                 home
             </Link>
-            <Link to="/resume" className={linkClass}>
+            <a
+                href="Owen Wang Resume.pdf"
+                target="_blank"
+                className={linkClass}
+            >
                 resume
-            </Link>
+            </a>
             <Link to="/projects" className={linkClass}>
                 projects
             </Link>

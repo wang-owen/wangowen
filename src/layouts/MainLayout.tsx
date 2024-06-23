@@ -2,7 +2,7 @@ import { useState, useEffect, createContext } from "react";
 import { Outlet } from "react-router-dom";
 import Navbar from "../components/Navbar";
 
-export const ThemeContext = createContext("light");
+export const ThemeContext = createContext("dark");
 
 const MainLayout = () => {
     const page = document.querySelector("html");
@@ -22,18 +22,16 @@ const MainLayout = () => {
 
     return (
         <>
-            <div
+            <main
                 className={`${
-                    theme === "light"
-                        ? "bg-gradient-to-bl from-white via-zinc-300 to-white text-black"
-                        : "bg-gradient-to-bl from-black via-slate-950 to-black text-white"
-                } duration-300 overflow-hidden`}
+                    theme === "light" ? "bg-white" : "bg-zinc-950"
+                } duration-300 min-h-screen font-openSans`}
             >
                 <ThemeContext.Provider value={theme}>
                     <Navbar toggleTheme={toggleTheme} />
                     <Outlet />
                 </ThemeContext.Provider>
-            </div>
+            </main>
         </>
     );
 };
