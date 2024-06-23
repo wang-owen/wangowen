@@ -62,7 +62,7 @@ const HomePage = () => {
                                             <img
                                                 src={ssj3}
                                                 alt="SSJ3"
-                                                className={`fixed z-10 rounded-box shadow-2xl ${
+                                                className={`fixed z-10 w-1/2 lg:w-auto h-auto rounded-box shadow-2xl ${
                                                     theme === "dark" &&
                                                     "shadow-white"
                                                 }`}
