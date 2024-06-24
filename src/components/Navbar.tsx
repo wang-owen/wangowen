@@ -24,13 +24,9 @@ const Navbar = ({ toggleTheme }: { toggleTheme: () => void }) => {
             <Link to="/projects" className={linkClass}>
                 projects
             </Link>
-            <a
-                href="Owen Wang Resume.pdf"
-                target="_blank"
-                className={`${linkClass} cursor-ne-resize`}
-            >
+            <Link to="/resume" className={linkClass}>
                 resume
-            </a>
+            </Link>
         </div>
     );
 };

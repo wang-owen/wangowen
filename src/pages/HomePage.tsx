@@ -93,13 +93,12 @@ const HomePage = () => {
                                         projects
                                     </Link>{" "}
                                     or take a look at my{" "}
-                                    <a
-                                        href="Owen Wang Resume.pdf"
-                                        target="_blank"
-                                        className="underline hover:opacity-50 duration-300 cursor-ne-resize"
+                                    <Link
+                                        to="/resume"
+                                        className="underline hover:opacity-50 duration-300"
                                     >
                                         resume
-                                    </a>
+                                    </Link>
                                     .
                                 </p>
                             </div>
