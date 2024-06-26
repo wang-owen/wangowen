@@ -156,10 +156,10 @@ const HomePage = () => {
                                                         League Rank
                                                     </div>
                                                     <div className="stat-value text-primary">
-                                                        Masters 221 LP
+                                                        Masters
                                                     </div>
                                                     <div className="stat-desc">
-                                                        S2023 S1
+                                                        221 LP
                                                     </div>
                                                 </div>
 
