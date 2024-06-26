@@ -4,11 +4,13 @@ import { Link } from "react-router-dom";
 import Socials from "../components/Socials";
 import ssj3 from "../assets/img/ssj3.gif";
 import Carousel from "../components/Carousel";
+import { FaDumbbell, FaBed } from "react-icons/fa6";
+import { SiLeagueoflegends } from "react-icons/si";
 
 const HomePage = () => {
     const theme = useContext(ThemeContext);
 
-    const [isHovered, setIsHovered] = useState(false);
+    const [itemHovered, setItemHovered] = useState("");
     const [pos, setPos] = useState({ x: 0, y: 0 });
 
     useEffect(() => {
@@ -16,12 +18,12 @@ const HomePage = () => {
             setPos({ x: event.clientX, y: event.clientY });
         };
 
-        if (isHovered) {
+        if (itemHovered) {
             window.addEventListener("mousemove", handleMouseMove);
         } else {
             window.removeEventListener("mousemove", handleMouseMove);
         }
-    }, [isHovered]);
+    }, [itemHovered]);
 
     return (
         <section className="flex flex-col self-center justify-center lg:gap-8">
@@ -47,21 +49,21 @@ const HomePage = () => {
                                     <span className="group">
                                         <span
                                             onMouseEnter={() =>
-                                                setIsHovered(true)
+                                                setItemHovered("ssj3")
                                             }
                                             onMouseLeave={() =>
-                                                setIsHovered(false)
+                                                setItemHovered("")
                                             }
                                         >
                                             <a
-                                                className="italic font-bold underline hover:opacity-50 duration-300 hover:cursor-ne-resize"
+                                                className="italic hover:opacity-50 duration-300 hover:cursor-ne-resize"
                                                 href="https://www.youtube.com/watch?v=8TGalu36BHA"
                                                 target="_blank"
                                             >
                                                 even further beyond
                                             </a>
                                         </span>
-                                        {isHovered && (
+                                        {itemHovered === "ssj3" && (
                                             <img
                                                 src={ssj3}
                                                 alt="SSJ3"
@@ -81,6 +83,104 @@ const HomePage = () => {
                                 <p>
                                     Interested in robotics 🦾, networking 🌐,
                                     computer vision 👁️, and web dev 🚀.
+                                </p>
+                                <p>
+                                    In my spare time I enjoy guitar 🎸,{" "}
+                                    <span className="group">
+                                        <span
+                                            onMouseEnter={() =>
+                                                setItemHovered("weightlifting")
+                                            }
+                                            onMouseLeave={() =>
+                                                setItemHovered("")
+                                            }
+                                        >
+                                            weightlifting 💪
+                                        </span>
+                                        {itemHovered === "weightlifting" && (
+                                            <div
+                                                className={`stat fixed bg-base-200 w-min z-10 rounded-box shadow-2xl ${
+                                                    theme === "dark" &&
+                                                    "shadow-white"
+                                                }`}
+                                                style={{
+                                                    top: pos.y + 10 + "px",
+                                                    left: pos.x + 10 + "px",
+                                                }}
+                                            >
+                                                <div className="stat-figure text-secondary">
+                                                    <FaDumbbell size={30} />
+                                                </div>
+                                                <div className="stat-title">
+                                                    Bench
+                                                </div>
+                                                <div className="stat-value text-secondary">
+                                                    185 lbs
+                                                </div>
+                                                <div className="stat-desc">
+                                                    Mar 2024
+                                                </div>
+                                            </div>
+                                        )}
+                                    </span>
+                                    , movies and TV shows 🍿,{" "}
+                                    <span className="group">
+                                        <span
+                                            onMouseEnter={() =>
+                                                setItemHovered("video games")
+                                            }
+                                            onMouseLeave={() =>
+                                                setItemHovered("")
+                                            }
+                                        >
+                                            video games 🎮
+                                        </span>
+                                        {itemHovered === "video games" && (
+                                            <div
+                                                className={`stats fixed bg-base-200 w-min z-10 rounded-box shadow-2xl ${
+                                                    theme === "dark" &&
+                                                    "shadow-white"
+                                                }`}
+                                                style={{
+                                                    top: pos.y + 10 + "px",
+                                                    left: pos.x + 10 + "px",
+                                                }}
+                                            >
+                                                <div className="stat">
+                                                    <div className="stat-figure text-primary">
+                                                        <SiLeagueoflegends
+                                                            size={30}
+                                                        />
+                                                    </div>
+                                                    <div className="stat-title">
+                                                        League Rank
+                                                    </div>
+                                                    <div className="stat-value text-primary">
+                                                        Masters 221 LP
+                                                    </div>
+                                                    <div className="stat-desc">
+                                                        S2023 S1
+                                                    </div>
+                                                </div>
+
+                                                <div className="stat">
+                                                    <div className="stat-figure text-secondary">
+                                                        <FaBed size={30} />
+                                                    </div>
+                                                    <div className="stat-title">
+                                                        Bedwars Wins
+                                                    </div>
+                                                    <div className="stat-value text-secondary">
+                                                        1000
+                                                    </div>
+                                                    <div className="stat-desc">
+                                                        4,917 Finals
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        )}
+                                    </span>
+                                    .
                                 </p>
                                 <br />
                                 <p>
