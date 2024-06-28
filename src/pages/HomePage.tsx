@@ -44,8 +44,7 @@ const HomePage = () => {
                             <div className="text-lg leading-relaxed">
                                 <p>
                                     I'm constantly looking for opportunities to
-                                    learn new languages and technologies, and
-                                    aim to push my skills{" "}
+                                    learn and explore, and aim to push my skills{" "}
                                     <span className="group">
                                         <span
                                             onMouseEnter={() =>
