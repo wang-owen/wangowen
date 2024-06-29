@@ -122,7 +122,7 @@ const HomePage = () => {
                                             </div>
                                         )}
                                     </span>
-                                    , movies and TV shows 🍿,{" "}
+                                    , movies and TV shows 🍿, and{" "}
                                     <span className="group">
                                         <span
                                             onMouseEnter={() =>
