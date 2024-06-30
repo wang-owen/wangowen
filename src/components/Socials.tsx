@@ -16,6 +16,7 @@ const Socials = () => {
             } bg-opacity-40 border border-gray-500 border-opacity-40 rounded-lg flex h-min shadow`}
         >
             <a
+                className="tooltip"
                 href="mailto:contact@wangowen.com"
                 target="_blank"
                 data-tip="Email"
@@ -23,6 +24,7 @@ const Socials = () => {
                 <img src={mailIcon} className={iconClass}></img>
             </a>
             <a
+                className="tooltip"
                 href="https://www.linkedin.com/in/o-wang/"
                 target="_blank"
                 data-tip="LinkedIn"
@@ -30,6 +32,7 @@ const Socials = () => {
                 <img src={linkedinIcon} className={iconClass}></img>
             </a>
             <a
+                className="tooltip"
                 href="https://github.com/wang-owen/"
                 target="_blank"
                 data-tip="GitHub"
