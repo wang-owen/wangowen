@@ -80,8 +80,7 @@ const HomePage = () => {
                                     .
                                 </p>
                                 <p>
-                                    Interested in robotics 🦾, networking 🌐,
-                                    computer vision 👁️, and web dev 🚀.
+                                    Interested in fullstack 🚀 and robotics 🦾.
                                 </p>
                                 <p>
                                     In my spare time I enjoy guitar 🎸,{" "}
