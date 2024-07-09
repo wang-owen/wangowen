@@ -19,7 +19,7 @@ const Socials = () => {
                 className="tooltip"
                 href="mailto:contact@wangowen.com"
                 target="_blank"
-                data-tip="Email"
+                data-tip="contact@wangowen.com"
             >
                 <img src={mailIcon} className={iconClass}></img>
             </a>
@@ -27,7 +27,7 @@ const Socials = () => {
                 className="tooltip"
                 href="https://www.linkedin.com/in/o-wang/"
                 target="_blank"
-                data-tip="LinkedIn"
+                data-tip="o-wang"
             >
                 <img src={linkedinIcon} className={iconClass}></img>
             </a>
@@ -35,7 +35,7 @@ const Socials = () => {
                 className="tooltip"
                 href="https://github.com/wang-owen/"
                 target="_blank"
-                data-tip="GitHub"
+                data-tip="wang-owen"
             >
                 <img src={githubIcon} className={iconClass}></img>
             </a>
