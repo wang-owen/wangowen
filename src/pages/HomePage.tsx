@@ -157,7 +157,7 @@ const HomePage = () => {
                                                         Masters
                                                     </div>
                                                     <div className="stat-desc">
-                                                        221 LP
+                                                        219 LP
                                                     </div>
                                                 </div>
 
