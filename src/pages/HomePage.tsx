@@ -80,9 +80,6 @@ const HomePage = () => {
                                     .
                                 </p>
                                 <p>
-                                    Interested in full-stack 🚀 and robotics 🦾.
-                                </p>
-                                <p>
                                     In my spare time I enjoy guitar 🎸,{" "}
                                     <span className="group">
                                         <span
