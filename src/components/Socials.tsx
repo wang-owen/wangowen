@@ -17,11 +17,11 @@ const Socials = () => {
         >
             <a
                 className="tooltip"
-                href="mailto:contact@wangowen.com"
+                href="https://github.com/wang-owen/"
                 target="_blank"
-                data-tip="contact@wangowen.com"
+                data-tip="wang-owen"
             >
-                <img src={mailIcon} className={iconClass}></img>
+                <img src={githubIcon} className={iconClass}></img>
             </a>
             <a
                 className="tooltip"
@@ -33,11 +33,11 @@ const Socials = () => {
             </a>
             <a
                 className="tooltip"
-                href="https://github.com/wang-owen/"
+                href="mailto:contact@wangowen.com"
                 target="_blank"
-                data-tip="wang-owen"
+                data-tip="contact@wangowen.com"
             >
-                <img src={githubIcon} className={iconClass}></img>
+                <img src={mailIcon} className={iconClass}></img>
             </a>
         </div>
     );
