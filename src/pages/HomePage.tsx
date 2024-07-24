@@ -37,8 +37,8 @@ const HomePage = () => {
                         <h1 className="text-5xl font-bold">Owen Wang</h1>
                         <div>
                             <p className="text-2xl">
-                                I'm a second year computer science student at
-                                the University of Waterloo.
+                                Hello, I'm a second year computer science
+                                student at the University of Waterloo.
                             </p>
                             <br />
                             <div className="text-lg leading-relaxed">
