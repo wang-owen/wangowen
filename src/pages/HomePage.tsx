@@ -187,14 +187,14 @@ const HomePage = () => {
                                     >
                                         projects
                                     </Link>{" "}
-                                    or take a look at my{" "}
+                                    and{" "}
                                     <Link
                                         to="/resume"
                                         className="underline hover:opacity-50 duration-300"
                                     >
                                         resume
                                     </Link>
-                                    .
+                                    !
                                 </p>
                             </div>
                         </div>
