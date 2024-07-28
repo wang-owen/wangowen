@@ -2,7 +2,6 @@ import { useState, useEffect, useContext } from "react";
 import { ThemeContext } from "../layouts/MainLayout";
 import { Link } from "react-router-dom";
 import Socials from "../components/Socials";
-import ssj3 from "../assets/img/ssj3.gif";
 import Carousel from "../components/Carousel";
 import { FaDumbbell, FaBed } from "react-icons/fa6";
 import { SiLeagueoflegends } from "react-icons/si";
@@ -43,44 +42,11 @@ const HomePage = () => {
                             <br />
                             <div className="text-lg leading-relaxed">
                                 <p>
-                                    I'm always looking for opportunities to
-                                    learn and grow, and aim to push my skills{" "}
-                                    <span className="group">
-                                        <span
-                                            onMouseEnter={() =>
-                                                setItemHovered("ssj3")
-                                            }
-                                            onMouseLeave={() =>
-                                                setItemHovered("")
-                                            }
-                                        >
-                                            <a
-                                                className="italic hover:opacity-50 duration-300 hover:cursor-ne-resize"
-                                                href="https://www.youtube.com/watch?v=8TGalu36BHA"
-                                                target="_blank"
-                                            >
-                                                even further beyond
-                                            </a>
-                                        </span>
-                                        {itemHovered === "ssj3" && (
-                                            <img
-                                                src={ssj3}
-                                                alt="SSJ3"
-                                                className={`fixed z-10 w-96 max-w-[50%] h-auto rounded-box shadow-2xl ${
-                                                    theme === "dark" &&
-                                                    "shadow-white"
-                                                }`}
-                                                style={{
-                                                    top: pos.y + 10 + "px",
-                                                    left: pos.x + 10 + "px",
-                                                }}
-                                            />
-                                        )}
-                                    </span>
-                                    .
+                                    I'm always looking for opportunities to lead
+                                    and grow my skillset.
                                 </p>
                                 <p>
-                                    In my spare time I enjoy guitar 🎸,{" "}
+                                    I also enjoy guitar 🎸,{" "}
                                     <span className="group">
                                         <span
                                             onMouseEnter={() =>
