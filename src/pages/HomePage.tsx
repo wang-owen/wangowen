@@ -3,8 +3,17 @@ import { ThemeContext } from "../layouts/MainLayout";
 import { Link } from "react-router-dom";
 import Socials from "../components/Socials";
 import Carousel from "../components/Carousel";
-import { FaDumbbell, FaBed } from "react-icons/fa6";
+import {
+    FaDumbbell,
+    FaBed,
+    FaEnvelope,
+    FaPaperPlane,
+    FaLinkedin,
+    FaUserPlus,
+} from "react-icons/fa6";
 import { SiLeagueoflegends } from "react-icons/si";
+import ContactForm from "../components/ContactForm";
+import ContactCard from "../components/ContactCard";
 
 const HomePage = () => {
     const theme = useContext(ThemeContext);
@@ -25,7 +34,7 @@ const HomePage = () => {
     }, [itemHovered]);
 
     return (
-        <section className="flex flex-col self-center justify-center lg:gap-8">
+        <section className="flex flex-col self-center justify-center lg:gap-16">
             <div className="flex justify-center px-8 lg:px-16">
                 <div className="flex flex-col lg:flex-row justify-between lg:w-2/3 gap-8">
                     <div
@@ -173,6 +182,32 @@ const HomePage = () => {
             </div>
             <div className="animate-fadeIn flex justify-center">
                 <Carousel />
+            </div>
+            <div className="flex justify-center gap-16 lg:gap-36 my-10">
+                <div className="flex flex-col">
+                    <h1 className="text-xl font-bold self-center mb-8">
+                        Contact Info
+                    </h1>
+                    <div className="flex flex-col gap-7">
+                        <ContactCard
+                            icon={<FaEnvelope size={25} />}
+                            title="Email"
+                            subtitle="contact@wangowen.com"
+                            href="mailto:contact@wangowen.com"
+                            button_icon={<FaPaperPlane />}
+                            button_label="Contact"
+                        />
+                        <ContactCard
+                            icon={<FaLinkedin size={25} />}
+                            title="LinkedIn"
+                            subtitle="o-wang"
+                            href="https://www.linkedin.com/in/o-wang/"
+                            button_icon={<FaUserPlus />}
+                            button_label="Connect"
+                        />
+                    </div>
+                </div>
+                <ContactForm />
             </div>
         </section>
     );
