@@ -12,6 +12,17 @@ const ProjectsPage = () => {
                             description="Music streaming service replacement | Download music from YouTube/Spotify and track changes to existing playlists"
                             link="https://github.com/wang-owen/Brook"
                             img="https://github.com/wang-owen/Brook/blob/main/client/public/screenshots/homepage.png?raw=true"
+                            skills={[
+                                "Python",
+                                "Django",
+                                "Django REST framework",
+                                "React",
+                                "TypeScript",
+                                "Tailwind CSS",
+                                "PostgreSQL",
+                                "RabbitMQ",
+                                "Amazon S3",
+                            ]}
                         />
                     </div>
                     <div className="w-full">
@@ -20,6 +31,12 @@ const ProjectsPage = () => {
                             description="Spreadsheet but for internship applications | Track application information, rejections, interviews, and offers"
                             link="https://github.com/wang-owen/Internsheet"
                             img="https://github.com/wang-owen/Internsheet/assets/69203168/98f1a7a1-c289-4d77-a33b-2f5b58d9f93c"
+                            skills={[
+                                "React",
+                                "TypeScript",
+                                "Tailwind CSS",
+                                "Supabase",
+                            ]}
                         />
                     </div>
                     <div className="w-full">
@@ -28,6 +45,7 @@ const ProjectsPage = () => {
                             description="JBKR Mobile (Java Brokers Mobile) is a stock trading simulator with real-time stock market data sourced from the NYSE and Nasdaq."
                             link="https://github.com/wang-owen/JBKR-Mobile"
                             img="https://github.com/wang-owen/JBKR-Mobile/assets/69203168/9bc91515-cfc4-459c-a814-54f108e8fa7a"
+                            skills={["Java"]}
                         />
                     </div>
                     <div className="grid grid-cols-2 lg:grid-cols-3 gap-9 w-full place-items-center">
