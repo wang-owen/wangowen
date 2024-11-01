@@ -76,10 +76,10 @@ const HomePage = () => {
                                                     Bench
                                                 </div>
                                                 <div className="stat-value text-secondary">
-                                                    185 lbs
+                                                    205 lbs
                                                 </div>
                                                 <div className="stat-desc">
-                                                    Mar 2024
+                                                    Oct 2024
                                                 </div>
                                             </div>
                                         )}
