@@ -25,11 +25,11 @@ const HomePage = () => {
     }, [itemHovered]);
 
     return (
-        <section className="flex flex-col self-center justify-center lg:gap-16">
+        <section className="flex flex-col self-center justify-center lg:gap-16 mt-[-10rem] animate-fadeIn">
             <div className="flex justify-center px-8 lg:px-16">
-                <div className="flex flex-col lg:flex-row justify-between lg:w-2/3 gap-8">
+                <div className="flex flex-col justify-between lg:w-2/3 gap-8 text-center items-center">
                     <div
-                        className={`relative animate-fadeInFromLeft flex flex-col gap-8 h-full lg:w-1/2 ${
+                        className={`relative flex flex-col gap-8 h-full lg:w-1/2 ${
                             theme === "light" ? "text-black" : "text-white"
                         }`}
                     >
@@ -40,7 +40,7 @@ const HomePage = () => {
                                 student at the University of Waterloo.
                             </p>
                             <br />
-                            <div className="text-lg leading-relaxed">
+                            {/* <div className="text-lg leading-relaxed">
                                 <p>
                                     I'm always looking for opportunities to lead
                                     and grow my skillset.
@@ -162,18 +162,18 @@ const HomePage = () => {
                                     </Link>
                                     !
                                 </p>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
-                    <div className="relative flex flex-col items-center gap-8 animate-fadeIn">
+                    <div className="relative flex flex-col items-center gap-8">
                         <img src="lofi knight.png" width={350} />
                         <Socials />
                     </div>
                 </div>
             </div>
-            <div className="animate-fadeIn flex justify-center">
+            {/* <div className="animate-fadeIn flex justify-center">
                 <Carousel />
-            </div>
+            </div> */}
         </section>
     );
 };

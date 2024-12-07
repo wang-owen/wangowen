@@ -21,9 +21,9 @@ const Navbar = ({ toggleTheme }: { toggleTheme: () => void }) => {
             <Link to="/" className={linkClass}>
                 home
             </Link>
-            <Link to="/projects" className={linkClass}>
+            {/* <Link to="/projects" className={linkClass}>
                 projects
-            </Link>
+            </Link> */}
             <Link to="/resume" className={linkClass}>
                 resume
             </Link>
