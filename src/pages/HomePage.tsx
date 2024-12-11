@@ -10,7 +10,7 @@ const HomePage = () => {
                 theme === "light" ? "text-black" : "text-white"
             }`}
         >
-            <div className="flex flex-col gap-8 text-center items-center w-2/3 mt-[-6rem]">
+            <div className="flex flex-col gap-8 text-center items-center w-2/3 scale-[80%] lg:scale-100">
                 <p className="text-2xl">Hello! My name is</p>
                 <h1 className="text-5xl font-bold">Owen Wang</h1>
                 <p className="text-xl">
